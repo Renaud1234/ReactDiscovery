@@ -23,7 +23,26 @@ function show() {
 }
 setInterval(show, 1000);
 
+function Item(props){
+  return <div className="item">
+    <b>Name:</b>{props.name}<br/>
+    <b>Price:</b>{props.price}
+  </div>;
+}
 
+function List(){
+  return <div>
+    <Item name="Cheese" price="4.99" />
+    <Item name="Bread" price="1.5" />
+    <Item name="Ice cream" price="24" />
+  </div>
+}
+
+const shoppingList = <List/>;
+ReactDOM.render(
+  shoppingList,
+  document.getElementById('shoppingList')
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
