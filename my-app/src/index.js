@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Counter from './Counter';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -37,6 +38,12 @@ function List(){
     <Item name="Ice cream" price="24" />
   </div>
 }
+
+const el = <Counter />; 
+ReactDOM.render(
+  el, 
+  document.getElementById('counter')
+);
 
 const shoppingList = <List/>;
 ReactDOM.render(
